@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <Language></Language>
-    <Theme></Theme>
+
 
     {{ $t("welcome") }}
     {{ $t("person.name") }}
@@ -11,11 +10,16 @@
 </template>
 
 <script lang="ts" setup>
-  import Language from "../components/lang"
-  import Theme from "../components/theme"
+
 
   import { useStore } from 'vuex'
   const store = useStore()
 
 
 </script>
+
+<style lang="less" scoped>
+  .home {
+    padding: 0 10rem;
+  }
+</style>
