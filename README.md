@@ -61,6 +61,6 @@ vuex 封装  module、getters、mutations、actions.state<br>
     });
 ```
 #### 引入其他语言文件并增加messages  key   key需与Element-plus国际化语言文件保持一致
-###element-plus 语言列表：
+#### element-plus 语言列表：
 https://github.com/element-plus/element-plus/tree/dev/packages/locale/lang
 
