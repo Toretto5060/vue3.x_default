@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import axiosPlugin from './plugins/axios';
 
+
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
@@ -15,6 +16,7 @@ let defaultLanguage = "zh-cn"
 if (localStorage.getItem('language')) {
     defaultLanguage = localStorage.getItem('language')
 }
+
 
 // 自定义国际化
 import { createI18n} from 'vue-i18n';
