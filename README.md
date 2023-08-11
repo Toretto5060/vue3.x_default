@@ -3,11 +3,11 @@
  vue3.3.x + vuex + router + typescript + axios + Element-plus
 ```
 
-###1、封装
+### 1、封装
 axios 封装，src/plugins/axios.ts  全局参数修改，src/api/  接口列表<br>
 vuex 封装  module、getters、mutations、actions.state<br>
 
-###2、组件
+### 2、组件
 #### 自定义国际化（目前仅支持中、英),兼容Element-plus 组件国际化，使用方法如下：
 ```vue
     <!--自定义使用-->
@@ -27,7 +27,7 @@ vuex 封装  module、getters、mutations、actions.state<br>
 组件  /components/lang.vue<br>
 语言文件 /language/
 
-####增加语言需更改 /components/lang.vue 、 main.ts,在如下处引用语言文件
+#### 增加语言需更改 /components/lang.vue 、 main.ts,在如下处引用语言文件
 
 ####  lang.vue （此处修改的为Element-plus 组件国际化）
 ---- 此处需引用其他语言文件并重构下方判断语言类型 locale.value
