@@ -11,12 +11,15 @@ import 'element-plus/dist/index.css'
 // 暗黑模式
 import 'element-plus/theme-chalk/dark/css-vars.css'
 
-// 默认语言
+// 初始化默认语言
 let defaultLanguage = "zh-cn"
 if (localStorage.getItem('language')) {
     defaultLanguage = localStorage.getItem('language')
 }
-
+// 初始化默认主题
+if (localStorage.getItem('theme')) {
+    store.dispatch('index/setTheme', localStorage.getItem('theme'))
+}
 
 // 自定义国际化
 import { createI18n} from 'vue-i18n';

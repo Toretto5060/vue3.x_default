@@ -1,17 +1,21 @@
 
-import { LanguageInfo } from './types'
+import { typesInfo } from './types'
 
 const state = {
   language: 'zh-cn',
-  locale: null
+  locale: '',
+  theme: 'light'
 }
 const mutations = {
-  SET_LANGUAGE(state: LanguageInfo, data: string) {
+  SET_LANGUAGE(state: typesInfo, data: string) {
     state.language = data;
   },
-  SET_LOCALE(state: LanguageInfo, data: any) {
+  SET_LOCALE(state: typesInfo, data: any) {
     state.locale = data;
-  }
+  },
+  SET_THEME(state: typesInfo, data: string) {
+    state.theme = data;
+  },
 
 }
 const actions = {
@@ -23,6 +27,11 @@ const actions = {
   setLocale ({ commit, state }, data) {
     return new Promise((resolve, reject) => {
       commit("SET_LOCALE", data)
+    })
+  },
+  setTheme ({ commit, state }, data) {
+    return new Promise((resolve, reject) => {
+      commit("SET_THEME", data)
     })
   },
 

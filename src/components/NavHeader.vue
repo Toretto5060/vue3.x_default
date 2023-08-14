@@ -1,20 +1,20 @@
 <template>
   <div class="nav-header">
     <div class="tool">
-      <el-avatar
-          :icon="UserFilled"
-      />
+      <user-center></user-center>
       <Language class="language"></Language>
-      <Theme class="theme"></Theme>
+      <dark-Mode class="theme"></dark-Mode>
     </div>
   </div>
 
 </template>
 
 <script lang="ts" setup>
-    import Language from "./lang"
-    import Theme from "./theme"
-    import { UserFilled } from '@element-plus/icons-vue'
+    import Language from "./SetLanguage"
+    import DarkMode from "./DarkMode"
+    import UserCenter from './UserCenter'
+
+
 
 </script>
 
@@ -61,9 +61,11 @@
     }
   }
   .el-avatar {
-    width: 40rem !important;
-    height: 40rem !important;
+    width: 30rem !important;
+    height: 30rem !important;
     cursor: pointer;
+    color: var(--el-avatar-text-color);
+    background: var(--el-avatar-bg-color);
   }
   .el-avatar--icon {
     font-size: 18rem !important;
