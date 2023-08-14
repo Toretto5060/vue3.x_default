@@ -1,9 +1,7 @@
 <template>
   <div class="nav-header">
     <div class="tool">
-      <el-avatar
-          :icon="UserFilled"
-      />
+      <user-center></user-center>
       <Language class="language"></Language>
       <dark-Mode class="theme"></dark-Mode>
     </div>
@@ -12,9 +10,11 @@
 </template>
 
 <script lang="ts" setup>
-    import Language from "./lang"
+    import Language from "./SetLanguage"
     import DarkMode from "./DarkMode"
-    import { UserFilled } from '@element-plus/icons-vue'
+    import UserCenter from './UserCenter'
+
+
 
 </script>
 
