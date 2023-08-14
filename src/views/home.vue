@@ -6,7 +6,6 @@
     {{ $t("person.name") }}
     {{ $t("helloWord")}}
 
-
   </div>
 </template>
 
@@ -15,24 +14,6 @@
   import { useStore } from 'vuex'
   const store = useStore()
 
-  import { useI18n  } from 'vue-i18n';
-  const { t, locale, setLocaleMessage } = useI18n();
-
-  import ZH from '../language/zh-cn';
-  import EN from '../language/en';
-
-  ZH.helloWord = "你好"
-  EN.helloWord =  "hello"
-  setLocaleMessage('en', ZH);
-  setLocaleMessage('zh-cn', EN);
-
-  const setLanguage = ()=>{
-    setLocaleMessage('en', ZH);
-    setLocaleMessage('zh-cn', EN);
-  }
-  setLanguage()
-
-
 
 
 </script>
@@ -40,5 +21,10 @@
 <style lang="less" scoped>
   .home {
     padding: 0 10rem;
+  }
+</style>
+<style lang="less">
+  .el-table__cell {
+    text-transform: capitalize;
   }
 </style>

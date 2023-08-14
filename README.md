@@ -62,21 +62,26 @@ vuex 封装  module、getters、mutations、actions.state<br>
 ```
 #### 引入其他语言文件并增加messages  key   key需与Element-plus国际化语言文件保持一致
 #### element-plus 语言列表：
-https://github.com/element-plus/element-plus/tree/dev/packages/locale/lang
-
+https://github.com/element-plus/element-plus/tree/dev/packages/locale/lang 
 ### 动态增加自定义语言翻译
+**<span style="color:#CC7832">~~setLocaleMessage~~</span>** 方法会覆盖默认语言的翻译内容。故应使用 **<span style="color:#CC7832">mergeLocaleMessage</span>**
 ```typescript
     import { useI18n  } from 'vue-i18n';
-    const { t, locale, setLocaleMessage } = useI18n();
+    const { t, locale, mergeLocaleMessage } = useI18n();
     
-    import ZH from '../language/zh-cn';
-    import EN from '../language/en';
-    
-    ZH.helloWord = "你好"
-    EN.helloWord =  "hello"
-    setLocaleMessage('en', ZH);
-    setLocaleMessage('zh-cn', EN);
+    const newMessages = {
+        'zh-cn': {
+            helloWord: '你好！',
+        },
+        en: {
+            helloWord: 'hello!',
+        },
+    };
+    Object.keys(newMessages).forEach((locale) => {
+        mergeLocaleMessage(locale, newMessages[locale]);
+    });
     // 使用
     {{ t('helloWord') }}
+    
 ```
 
