@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <NavHeader></NavHeader>
+    <nav-header></nav-header>
     <div class="page_content">
       <router-view/>
     </div>
@@ -20,6 +20,8 @@ import NavHeader from './components/NavHeader'
   padding: 0;
 
 }
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

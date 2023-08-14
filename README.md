@@ -64,3 +64,19 @@ vuex 封装  module、getters、mutations、actions.state<br>
 #### element-plus 语言列表：
 https://github.com/element-plus/element-plus/tree/dev/packages/locale/lang
 
+### 动态增加自定义语言翻译
+```typescript
+    import { useI18n  } from 'vue-i18n';
+    const { t, locale, setLocaleMessage } = useI18n();
+    
+    import ZH from '../language/zh-cn';
+    import EN from '../language/en';
+    
+    ZH.helloWord = "你好"
+    EN.helloWord =  "hello"
+    setLocaleMessage('en', ZH);
+    setLocaleMessage('zh-cn', EN);
+    // 使用
+    {{ t('helloWord') }}
+```
+

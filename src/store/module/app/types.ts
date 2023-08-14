@@ -1,4 +1,5 @@
-export interface LanguageInfo {
+export interface typesInfo {
     language: string,
-    locale: any
+    locale: any,
+    theme: string
 }

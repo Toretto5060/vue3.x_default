@@ -5,7 +5,7 @@
           :icon="UserFilled"
       />
       <Language class="language"></Language>
-      <Theme class="theme"></Theme>
+      <dark-Mode class="theme"></dark-Mode>
     </div>
   </div>
 
@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
     import Language from "./lang"
-    import Theme from "./theme"
+    import DarkMode from "./DarkMode"
     import { UserFilled } from '@element-plus/icons-vue'
 
 </script>
@@ -61,9 +61,11 @@
     }
   }
   .el-avatar {
-    width: 40rem !important;
-    height: 40rem !important;
+    width: 30rem !important;
+    height: 30rem !important;
     cursor: pointer;
+    color: var(--el-avatar-text-color);
+    background: var(--el-avatar-bg-color);
   }
   .el-avatar--icon {
     font-size: 18rem !important;

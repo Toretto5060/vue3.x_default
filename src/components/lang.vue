@@ -42,14 +42,14 @@
   }
   // emits('localeChange', localeElement)
   store.dispatch('index/setLocale', localeElement)
-
-
 </script>
 
 <style lang="less" scoped>
   .language_icon  {
     i {
       cursor: pointer;
+      color: var(--el-menu-text-color);
+      transition: color 0.3s;
     }
   }
 
