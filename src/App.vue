@@ -21,12 +21,13 @@ import NavHeader from './components/NavHeader'
 
 }
 
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  //color: #2c3e50;
   font-size: 16rem !important;
+  color: var(--el-menu-text-color);
+  transition: color 0.6s;
 }
 </style>

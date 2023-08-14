@@ -40,7 +40,5 @@
 <style lang="less" scoped>
   .home {
     padding: 0 10rem;
-    color: var(--el-menu-text-color);
-    transition: color 0.3s;
   }
 </style>

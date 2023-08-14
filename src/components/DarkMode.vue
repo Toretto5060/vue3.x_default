@@ -76,32 +76,39 @@
   }
 </style>
 <style lang="less">
-.el-switch.is-checked .el-switch__core {
-  background: #2C2C2C !important;
-  border-color: var(--border-color) !important;
-  cursor: pointer;
-  transition: all 0.3s !important;
-}
+  .dark-box {
+    .el-switch.is-checked .el-switch__core {
+      background: #2C2C2C !important;
+      border-color: var(--border-color) !important;
+      cursor: pointer;
+      transition: all 0.3s !important;
+    }
 
+    .el-switch {
+      .el-switch__core {
+        border-color: var(--el-color-info-light-7) !important;
+        background: var(--el-bg-color-page) !important;
+      }
+      .el-switch__action {
+        background-color: var(--bg-color);
+        color: var(--text-color-light);
+        background: url("~@/assets/sunny.svg") no-repeat;
+        background-size: 75%;
+        background-position: 60% 50%;
 
-
-.el-switch {
-  .el-switch__action {
-    background-color: var(--bg-color);
-    color: var(--text-color-light);
-    background: url("~@/assets/sunny.svg") no-repeat;
-    background-size: 75%;
-    background-position: 60% 50%;
+      }
+    }
+    .el-switch.is-checked {
+      .el-switch__action {
+        background-color: #000;
+        background-image: url("~@/assets/moon.svg");
+        background-size: 75%;
+        background-position: 60% 50%;
+      }
+      .el-switch__core {
+        border-color: var(--el-color-info-light-7) !important;
+      }
+    }
 
   }
-}
-.el-switch.is-checked {
-  .el-switch__action {
-    background-color: #000;
-    background-image: url("~@/assets/moon.svg");
-    background-size: 75%;
-    background-position: 60% 50%;
-  }
-}
-
 </style>
