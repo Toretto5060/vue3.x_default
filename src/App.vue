@@ -1,14 +1,10 @@
 <template>
   <div class="page">
-    <nav-header></nav-header>
-    <div class="page_content">
       <router-view/>
-    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import NavHeader from './components/NavHeader'
 
 
 
@@ -19,6 +15,11 @@ import NavHeader from './components/NavHeader'
   margin: 0;
   padding: 0;
 
+}
+.page_content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 #app {

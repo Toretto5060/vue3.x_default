@@ -1,18 +1,16 @@
 <template>
   <div class="home">
-
-
-    {{ $t("welcome") }}
-    {{ $t("person.name") }}
-    {{ $t("helloWord")}}
-
+    <nav-header></nav-header>
+    <div class="home_content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-  import { ref } from 'vue'
-  import { useStore } from 'vuex'
-  const store = useStore()
+  import NavHeader from '../components/NavHeader'
+
+
 
 
 
@@ -20,11 +18,15 @@
 
 <style lang="less" scoped>
   .home {
-    padding: 0 10rem;
+    //padding: 0 10rem;
+    position: absolute;
+    height: 100%;
+    width: 100%;
   }
 </style>
 <style lang="less">
-  .el-table__cell {
-    text-transform: capitalize;
+  .home_content {
+    width: 100%;
+    height: calc(100% - 60rem);
   }
 </style>
